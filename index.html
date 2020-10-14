@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooter</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/script.js"></script>
+  </head>
+  <body>
+    <div class="container m-0 p-0">
+      <div class="row m-0 p-0">
+        <div class="col-10 offset-1 text-center">
+          <h1>Shooter Game</h1>
+        </div>
+      </div>
+      <div class="row m-0 p-0">
+        <div class="col-9 offset-1">
+          <canvas
+            class="game"
+            id="gameWindow"
+            width="800"
+            height="600"
+          ></canvas>
+        </div>
+        <div
+          class="col-2 border border-dark d-flex flex-column align-content-center"
+        >
+          <div class="bg-info text-center my-3"><p id="score">0</p></div>
+          <div class="my-3">
+            <h2>RULES :</h2>
+            <p>Defeat all the monster (there is only 10 of them)</p>
+            <h2 class="mt-5">History</h2>
+            <p>
+              The monster are very evil and you need to kill them. What did you
+              expect ?
+            </p>
+          </div>
+          <button class="btn btn-success mt-auto mb-3 w-100" id="start">
+            Play
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <blockquote>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/nhor-phai" title="Nhor Phai"
+        >Nhor Phai</a
+      >
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons"
+        >Smashicons</a
+      >
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      Icons made by
+      <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from
+      <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    </blockquote> -->
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="assets/node_modules/jquery/dist/jquery.slim.js"></script>
+    <script src="assets/node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
