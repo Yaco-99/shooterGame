@@ -8,29 +8,57 @@
     <script defer src="assets/js/script.js"></script>
   </head>
   <body>
-    <div class="container m-0 p-0">
+    <div class="container-fluid px-3">
       <div class="row m-0 p-0">
         <div class="col-10 offset-1 text-center">
           <h1>Shooter Game</h1>
         </div>
       </div>
-      <div class="row m-0 p-0">
-        <div class="col-9 offset-1">
+      <div class="row m-0">
+        <div
+          class="col-2 border border-dark d-flex flex-column align-content-center"
+        >
+          <div class="infoBox bg-info text-center my-3">
+            <h3 class="m-0 p-0">Time</h3>
+            <p id="timer">0</p>
+          </div>
+          <div>
+            <h4>HARD :</h4>
+            <p>You will need to kill all the monster in 30s.</p>
+          </div>
+          <div>
+            <h4>Best Time</h4>
+            <ol id="scoreList">
+              <li>Yannick : 0.5s, 0 miss</li>
+            </ol>
+          </div>
+          <button id="hardMode" class="btn btn-danger mt-auto mb-3 w-100">
+            Play HARD
+          </button>
+        </div>
+        <div class="col-8 px-3">
           <canvas
             class="game"
             id="gameWindow"
-            width="800"
+            width="810"
             height="600"
           ></canvas>
         </div>
         <div
           class="col-2 border border-dark d-flex flex-column align-content-center"
         >
-          <div class="bg-info text-center my-3"><p id="score">0</p></div>
+          <div class="infoBox bg-info text-center my-3">
+            <h3 class="m-0 p-0">Hit</h3>
+            <p id="score">0</p>
+          </div>
+          <div class="infoBox bg-warning text-center my-3">
+            <h3 class="m-0 p-0">Miss</h3>
+            <p id="miss">0</p>
+          </div>
           <div class="my-3">
-            <h2>RULES :</h2>
+            <h4>RULES :</h4>
             <p>Defeat all the monster (there is only 10 of them)</p>
-            <h2 class="mt-5">History</h2>
+            <h4 class="mt-5">History</h4>
             <p>
               The monster are very evil and you need to kill them. What did you
               expect ?
