@@ -21,7 +21,8 @@
     time,
     hard,
     playerList = [],
-    inAnimation = false;
+    inAnimation = false,
+    hit;
 
   window.addEventListener("keydown", function (event) {
     if (event.key !== undefined) {
@@ -68,6 +69,7 @@
       ballyPos = yPos - 20;
       let exit = false;
       do {
+        hit = false;
         inAnimation = true;
         const promise = new Promise((resolve) => {
           setTimeout(() => {
@@ -85,12 +87,13 @@
             monsterX = random(760);
             monsterY = random(200);
             exit = true;
+            hit = true;
           }
         }
       } while (!exit);
       console.log("out");
       inAnimation = false;
-      exit ? "hit" : countMissed();
+      hit ? "hit" : countMissed();
       moveCannon();
     }
   }
